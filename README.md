@@ -40,6 +40,7 @@ The tool maps and processes PDF resources using the following logic:
 Run the program:
 ```bash
 python your_script_name.py
+```
 
 ---
 
