@@ -41,6 +41,8 @@ Run the program:
 ```bash
 python your_script_name.py
 
+---
+
 <a name="chinese-version"></a>
 # 🔪 PDF PicKiller (中文版)
 
