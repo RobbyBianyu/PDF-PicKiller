@@ -1,4 +1,48 @@
-# 🔪 PDF PicKiller
+[English](#english-version) | [中文版](#chinese-version)
+
+---
+
+<a name="english-version"></a>
+# 🔪 PDF PicKiller (English)
+A high-performance Python utility designed to detect and bulk remove images, complex gradients (Shadings), and nested watermark objects (Form XObjects) from PDF files.
+
+### ✨ Key Features
+
+* **Deep Inspection**: Identifies standard images, various PDF shading types (Axial, Radial, etc.), and nested Form objects.
+* **Smart Preview**: Instantly preview specific PDF internal images using the system's default viewer via commands (e.g., `P IM1`).
+* **"Form Cracker"**: Automatically digs into nested Form XObjects to find and extract hidden raster images.
+* **Auto-Decryption**: Built-in standard PDF decryption engine; processes encrypted documents directly without pre-processing.
+* **Visual Interface**: Built with `rich` and `colorama` for beautiful progress bars and colored terminal feedback.
+
+### 🧪 Technical Logic
+
+The tool maps and processes PDF resources using the following logic:
+
+* **Shading Coordinate Mapping**: For radial or axial gradients, the tool extracts the $Coords$ array for parsing:
+    $$\text{Coords} = [x_0, y_0, r_0, x_1, y_1, r_1]$$
+* **Object Resolution**: Recursively dereferences "Indirect Objects" to accurately locate the `/Subtype` (whether `/Image` or `/Form`) regardless of nesting depth.
+
+### 🛠️ Installation
+
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/PDF-PicKiller.git](https://github.com/YOUR_USERNAME/PDF-PicKiller.git)
+    cd PDF-PicKiller
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### 🚀 Usage
+
+Run the program:
+```bash
+python your_script_name.py
+
+<a name="chinese-version"></a>
+# 🔪 PDF PicKiller (中文版)
 
 这是一个高性能的 Python 工具，专门用于探测并批量化删除 PDF 文件中的图像、复杂的渐变背景（Shadings）以及嵌套的水印对象（Form XObjects）。
 
