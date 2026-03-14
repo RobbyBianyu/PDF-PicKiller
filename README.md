@@ -1,6 +1,6 @@
 # 🔪 PDF PicKiller
 
-这是一个高性能的 Python 工具，专门用于探测并精确删除 PDF 文件中的图像、复杂的渐变背景（Shadings）以及嵌套的水印对象（Form XObjects）。
+这是一个高性能的 Python 工具，专门用于探测并批量化删除 PDF 文件中的图像、复杂的渐变背景（Shadings）以及嵌套的水印对象（Form XObjects）。
 
 ## ✨ 核心功能
 
